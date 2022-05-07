@@ -1,4 +1,3 @@
-
 function openMobileNav() {
   elementDisplay(navMobile, "flex");
   elementDisplay(burgerBtn, "none");
@@ -59,36 +58,28 @@ function navShadow() {
 }
 
 function activeNavLink() {
-    const section = document.querySelector("section");
-    const navLinks = document.querySelectorAll(".nav__item a");
-    console.log(navLinks);
-    const navLinksArr = Array.from(navLinks);
-    console.log(navLinksArr);
-  
-    const sectionClass = section.className;
-    console.log(sectionClass);
-  
-    for (const link of navLinksArr) {
-      const linkContent = link.innerHTML;
-      console.log(linkContent);
-      const navItem = link.parentElement;
-      console.log(navItem);
-  
-      const linkContentToLowerCase =
-        linkContent.charAt(0).toLocaleLowerCase() + linkContent.slice(1);
-  
-      if (
-        sectionClass == linkContentToLowerCase ||
-        (sectionClass === "about" && linkContentToLowerCase === "home")
-      ) {
-        navItem.classList.add("active");
-        console.log(navItem);
-      } else {
-        navItem.parentElement.classList.remove("active");
-      }
+  const section = document.querySelector("section");
+  const navLinks = document.querySelectorAll(".nav__item a");
+  const navLinksArr = Array.from(navLinks);
+
+  const sectionClass = section.className;
+
+  for (const link of navLinksArr) {
+    const linkContent = link.innerHTML;
+    const navItem = link.parentElement;
+
+    const linkContentToLowerCase =
+      linkContent.charAt(0).toLocaleLowerCase() + linkContent.slice(1);
+
+    if (
+      sectionClass == linkContentToLowerCase ||
+      (sectionClass === "about" && linkContentToLowerCase === "home")
+    ) {
+      navItem.classList.add("active");
+    } else {
+      navItem.parentElement.classList.remove("active");
     }
   }
-  
-  activeNavLink();
+}
 
-
+activeNavLink();

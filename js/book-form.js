@@ -14,7 +14,7 @@ const formSentBtn = document.querySelector(".form-sent-ok");
 const bookNowSection = document.querySelector(".book-now");
 let mainSection;
 
-const footer = document.querySelector('.footer');
+const footer = document.querySelector(".footer");
 
 function openBookNowForm(e) {
   const openBookNowFormBtn = e.target;
@@ -26,7 +26,7 @@ function openBookNowForm(e) {
   mainSection = currentSection;
 
   elementDisplay(mainSection, "none");
-  elementDisplay(footer, 'none');
+  elementDisplay(footer, "none");
   elementDisplay(bookNowSection, "flex");
   removeElementClass(bookNowSection, "fade-in");
   addElementClass(bookNowSection, "fade-in");
@@ -86,7 +86,6 @@ function userDataValidation() {
   userName = document.querySelector("#name");
   userSurname = document.querySelector("#surname");
   userPhone = document.querySelector("#phone");
-  console.log(userName);
 
   if (userName.value === "" || userName.value.length < 2) {
     addError(userName, "enter a", "name");
@@ -127,8 +126,6 @@ function emailIsValid() {
 }
 
 function selectsIsValid() {
-  console.log(optionsArr);
-
   if (offerSelect.value === "not-selected") {
     addError(offerSelect, "choose a", "offer type");
   } else {
@@ -158,7 +155,6 @@ function formValidation() {
 
 function clearForm() {
   inputs = [userName, userSurname, userPhone, userEmail, fromDate];
-  console.log(inputs);
 
   for (const input of inputs) {
     input.value = "";
@@ -184,8 +180,6 @@ function clearErrors() {
     offerDepartureSelect,
   ];
 
-  console.log(inputs);
-
   for (const input of inputs) {
     if (
       input.classList.contains("error") ||
@@ -198,10 +192,6 @@ function clearErrors() {
 
 function submitOfferForm(e) {
   e.preventDefault();
-
-  console.log(!formValidation());
-  console.log(formIsValid);
-  console.log(!formIsValid);
 
   formValidation();
 
@@ -227,27 +217,25 @@ function submitOfferForm(e) {
 }
 
 function closeForm() {
+  clearErrors();
 
-    clearErrors();
+  mainSection = currentSection;
 
-    mainSection = currentSection
-  
-    elementDisplay(mainSection, "flex");
-    elementDisplay(footer, 'block');
-    removeElementClass(bookNowSection, "fade-in");
-    addElementClass(mainSection, "fade-in");
-    addElementClass(footer, 'fade-in')
-    elementDisplay(bookNowSection, "none");
-  
-  }
+  elementDisplay(mainSection, "flex");
+  elementDisplay(footer, "block");
+  removeElementClass(bookNowSection, "fade-in");
+  addElementClass(mainSection, "fade-in");
+  addElementClass(footer, "fade-in");
+  elementDisplay(bookNowSection, "none");
+}
 
 function formSuccessfullySent() {
   mainSection = currentSection;
   elementDisplay(mainSection, "flex");
-  elementDisplay(footer, 'block');
+  elementDisplay(footer, "block");
   elementDisplay(formSentSection, "none");
   addElementClass(mainSection, "fade-in");
-  addElementClass(footer, 'fade-in');
+  addElementClass(footer, "fade-in");
 }
 
 function closeBookNowSection() {
@@ -256,7 +244,7 @@ function closeBookNowSection() {
   elementDisplay(mainSection, "flex");
 }
 
-fromDate.addEventListener('input', tripDuration);
-offerSelect.addEventListener('change', tripDuration);
+fromDate.addEventListener("input", tripDuration);
+offerSelect.addEventListener("change", tripDuration);
 
-offerForm.addEventListener('submit', submitOfferForm);
+offerForm.addEventListener("submit", submitOfferForm);

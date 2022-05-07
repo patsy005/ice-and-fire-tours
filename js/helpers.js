@@ -20,9 +20,6 @@ function elementBackground(element, value) {
 function windowSize() {
   width = document.documentElement.clientWidth;
   height = document.documentElement.clientHeight;
-
-  console.log(width);
-  console.log(height);
 }
 
 function addError(input, msg, type) {
@@ -42,9 +39,7 @@ function removeError(input) {
 const formIsValid = true;
 const formIsInvalid = false;
 
-function currentYear () {
-  const currentYear = document.querySelector('.current-year');
+function currentYear() {
+  const currentYear = document.querySelector(".current-year");
   currentYear.textContent = +year;
 }
-
-

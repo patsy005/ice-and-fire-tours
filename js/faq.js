@@ -3,14 +3,11 @@ const iconsArr = Array.from(icons);
 
 function showFAQInfo(e) {
   const icon = e.target;
-  console.log(icon);
   const faqBoxTop = icon.parentElement;
-  console.log(faqBoxTop);
-  const faqBoxBottom = faqBoxTop.nextElementSibling;
-  console.log(faqBoxBottom);
 
-    faqBoxBottom.classList.toggle("block");
-  //   faqBoxBottom.classList.toggle('none');
+  const faqBoxBottom = faqBoxTop.nextElementSibling;
+
+  faqBoxBottom.classList.toggle("block");
 
   const iconSrc = icon.src;
 

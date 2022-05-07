@@ -1,9 +1,8 @@
 const bookNowBtns = document.querySelectorAll(".offer-btn");
 const bookNowBtsArr = Array.from(bookNowBtns);
-console.log(bookNowBtsArr)
+console.log(bookNowBtsArr);
 
 const currentSection = document.querySelector(".offer");
-
 
 //offer cards hovering
 const offerCardsFront = document.querySelectorAll(".offer__card--front");
@@ -20,10 +19,8 @@ function showBackCard() {
 
   const cardFront = clickedIcon.parentElement;
   const card = cardFront.parentElement;
-  console.log(card);
   const cardStyles = window.getComputedStyle(card);
   const cardFrontHeight = cardStyles.getPropertyValue("height");
-  console.log(`front height: ${cardFrontHeight}`);
 
   const cardBack = cardFront.nextElementSibling;
   card.style.height = `${cardFrontHeight}`;
@@ -36,14 +33,11 @@ function showBackCard() {
   addElementClass(cardBack, "slide-in");
   elementDisplay(cardBack, "flex");
 
-
   elementDisplay(clickedIcon, "none");
 
   toggleElementClass(card, "offer__card-back-img");
   addElementClass(card, "fade-in");
   removeElementClass(card, "fade-out");
-
-  console.log("show back");
 
   cardBack.addEventListener("mouseleave", hideBackCard);
 }
@@ -53,7 +47,6 @@ function hideBackCard() {
   const card = cardBack.parentElement;
   const cardStyles = window.getComputedStyle(card);
   const cardBackHeight = cardStyles.getPropertyValue("height");
-  console.log(`back height: ${cardBackHeight}`);
 
   const cardFront = cardBack.previousElementSibling;
 
@@ -77,16 +70,12 @@ function hideBackCard() {
   removeElementClass(card, "fade-in");
   addElementClass(card, "fade-in");
 
-  console.log("hide back");
-
   cardBack.removeEventListener("mouseleave", hideBackCard);
 }
 
 for (const icon of offerIconsArr) {
   icon.addEventListener("mouseover", showBackCard);
 }
-
-
 
 // listeners
 for (const bookNowBtn of bookNowBtsArr) {

@@ -228,8 +228,8 @@
 
 .header {
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#272727), to(rgba(0, 0, 0, 0.42))), url("img/new/hero-img-small.jpg");
-  background-image: linear-gradient(180deg, #272727 0%, rgba(0, 0, 0, 0.42) 100%), url("img/new/hero-img-small.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#272727), to(rgba(0, 0, 0, 0.42))), url("/img/new/hero-img-small.jpg");
+  background-image: linear-gradient(180deg, #272727 0%, rgba(0, 0, 0, 0.42) 100%), url("/img/new/hero-img-small.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

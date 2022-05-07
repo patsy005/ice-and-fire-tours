@@ -1,0 +1,1035 @@
+@media (min-width: 992px) {
+  h1,
+  h2 {
+    font-size: 3em;
+  }
+  .burger-btn,
+  .exit-btn {
+    display: none;
+  }
+
+  .nav {
+    width: 100%;
+    height: auto;
+    padding: 1rem 1rem;
+    display: flex;
+    position: fixed;
+    background-color: transparent;
+
+    &__list {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__item {
+      position: relative;
+      // margin-bottom: 0.9em;
+      margin-bottom: 0;
+      padding: 0.2em 0.6em;
+      list-style: none;
+      font-size: 2.1rem;
+      transition: 0.3s;
+
+      a,
+      a::before,
+      a::after {
+        transition: 0.3s;
+      }
+
+      a:hover {
+        color: $primary;
+      }
+
+      a::before,
+      a::after {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        border-bottom: 1px solid $primary;
+        box-shadow: 0 2px 8px $primary;
+        content: "";
+      }
+
+      a::after {
+        left: 50%;
+      }
+
+      a::before {
+        right: 50%;
+      }
+
+      a:hover::before,
+      a:hover::after {
+        width: 25%;
+      }
+
+      &-logo {
+        display: block;
+
+        a {
+          color: $primary;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-family: "Kalam", cursive;
+        }
+        a:hover {
+          color: $primary;
+        }
+
+        a:hover::after,
+        a:hover::before {
+          border: 1px solid $primary;
+          box-shadow: 0 2px 8px $primary;
+        }
+      }
+    }
+
+    .shadow-bg {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+  }
+
+  .header {
+    background-image: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+
+    &__hero-img {
+      grid-column: 1/2;
+      @include heroLg("../img/new/hero-img-lg.jpg");
+      height: 100vh;
+    }
+
+    &__hero-text {
+      grid-column: 2/3;
+
+      h1 {
+        font-size: 5.5rem;
+      }
+
+      p {
+        font-size: 2rem;
+        color: rgb(194, 194, 194);
+      }
+    }
+
+    .cta-arrow-down {
+      display: none;
+    }
+
+    .cta-arrow-large {
+      display: block;
+      position: absolute;
+      bottom: 3rem;
+      right: 25%;
+      transform: translate(-50%);
+      margin-bottom: 2em;
+      padding: 0.5em;
+      border: 1px solid white;
+      border-radius: 50%;
+      opacity: 0.8;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        content: "";
+      }
+
+      &::before {
+        border: 2px solid white;
+        animation: pulse 2s infinite;
+      }
+
+      &::after {
+        border: 2.5px solid white;
+        animation: pulseTwo 2s infinite;
+      }
+    }
+  }
+
+  .about {
+    padding: 3em;
+    position: relative;
+
+    // .wrapper {
+    //   display: grid;
+    //   grid-template-columns: repeat(2, 1fr);
+    //   max-width: 1200px;
+    // }
+
+    &__heading {
+      font-size: 2.8em;
+    }
+
+    &__content {
+      p {
+        font-size: 1.5em;
+      }
+
+      &--text {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &__left {
+      grid-column: 1/2;
+      order: 1;
+      margin-right: 1.3rem;
+    }
+
+    &__right {
+      grid-column: 2/3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 0;
+      width: 100%;
+    }
+
+    &__img {
+      height: 11.2em;
+
+      &--one {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
+      &--two {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+
+      &--three {
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+    }
+
+    &__cards {
+      display: flex;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2.5rem;
+
+      &--icon {
+        margin-bottom: 1em;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &--text {
+        h3 {
+          font-size: 1.5em;
+          margin-bottom: 0.9rem;
+        }
+
+        p {
+          font-size: 1.3em;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .offer {
+    &__section {
+      width: 100%;
+
+      // h1, h2{
+      //   font-size: 2em;
+      // }
+    }
+
+    &__card {
+      h3 {
+        font-size: 1.7em;
+        margin-bottom: 2.5rem;
+      }
+
+      p {
+        font-size: 1.3em;
+        font-weight: normal;
+        color: $light;
+      }
+    }
+
+    &__card:first-child {
+      margin-right: 1.5rem;
+    }
+
+    &__card:last-child {
+      margin-left: 1.5rem;
+    }
+
+    .btn {
+      font-size: 1.5em;
+      margin-top: 2.5rem;
+    }
+  }
+
+  .gallery {
+    // height: auto;
+    padding-bottom: 2rem;
+    h1 {
+      margin-bottom: 3rem;
+      font-size: 3rem;
+    }
+
+    &__box {
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .prices {
+    h1 {
+      font-size: 3em;
+    }
+
+    &__cards {
+      flex-direction: row;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    &__card {
+      margin-top: 4rem;
+      &--cta {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .contact {
+    h1,
+    h2 {
+      margin-top: 7rem;
+      font-size: 3em;
+    }
+
+    &__contact-data {
+      width: 80%;
+      margin: 0 auto;
+
+      &--cards {
+        gap: 3rem;
+      }
+
+      &--card {
+        .office-img {
+          height: 23rem;
+        }
+
+        h3 {
+          font-size: 1.8em;
+        }
+      }
+
+      &--icon {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+
+        p {
+          font-size: 1.6em;
+          margin-left: 1.2rem;
+        }
+      }
+    }
+    .btn {
+      font-size: 1.6em;
+    }
+
+    &__guides-cards {
+      flex-direction: row;
+    }
+
+    &__guides-card {
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: 1.8em;
+      }
+    }
+
+    &__guides-img {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    &__guides-icons {
+      justify-content: space-around;
+    }
+
+    &__form {
+      form {
+        label {
+          font-size: 1.5em;
+          margin-bottom: 1rem;
+        }
+
+        input {
+          margin-bottom: 1.5rem;
+        }
+
+        input,
+        textarea {
+          padding: 1.3rem 0;
+        }
+      }
+    }
+  }
+
+  .book-now {
+    h3 {
+      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    &__form {
+      width: 70%;
+
+      &--date {
+        margin-bottom: 1.5rem;
+        gap: 3rem;
+      }
+
+      &--personal-data {
+        gap: 3rem;
+      }
+    }
+
+    &__btns {
+      gap: 3rem;
+    }
+  }
+
+  .footer {
+    &__adresses {
+      h3 {
+        margin-bottom: 2.3rem;
+      }
+
+      h4 {
+        margin-bottom: 0.7rem;
+      }
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &__adress:first-of-type {
+      margin-bottom: 1.5rem;
+    }
+
+    &__nav {
+      li {
+        margin-bottom: 2.3rem;
+      }
+
+      &--box {
+        margin-top: 2.3rem;
+
+        a {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      &--icons {
+        margin-top: 2.3rem;
+      }
+    }
+
+    &__bottom {
+      &--box {
+        width: 50%;
+        margin-bottom: 2.5rem;
+        font-size: 1.2em;
+      }
+
+      &--circle {
+        background-color: $primary-dark;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .reviews {
+    &__cards {
+      width: 90%;
+    }
+
+    &__nav {
+      .prev,
+      .next {
+        width: 35px;
+        height: 35px;
+        font-size: 2.7em;
+      }
+
+      .prev {
+        left: 3%;
+      }
+
+      .next {
+        right: 3%;
+      }
+    }
+
+    &__card {
+      height: 54rem;
+    }
+
+    &__box {
+      padding: 2.5rem;
+
+      p {
+        line-height: 1.7rem;
+        letter-spacing: 3px;
+      }
+    }
+
+    &__icon {
+      left: 1.3rem;
+    }
+  }
+
+  .about-iceland {
+    .swiper {
+      width: 60rem;
+      margin-bottom: 5rem;
+    }
+
+    &__card {
+      margin-top: 4rem;
+
+      p {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviews {
+    &__card {
+      height: 47rem;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav {
+    padding: 1rem 9rem;
+  }
+  .contact {
+    &__contact-data {
+      width: 70%;
+
+      &--cards {
+        gap: 4rem;
+      }
+
+      &--card {
+        .office-img {
+          height: 27rem;
+        }
+
+        h3 {
+          font-size: 2em;
+        }
+      }
+
+      &--icon {
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        p {
+          font-size: 1.8em;
+          margin-left: 1.5rem;
+        }
+      }
+    }
+    .btn {
+      font-size: 1.8em;
+    }
+
+    h2 {
+      font-size: 3em;
+    }
+
+    &__guides-cards {
+      flex-direction: row;
+      gap: 3rem;
+    }
+
+    &__guides-card {
+      margin-bottom: 3rem;
+
+      h3 {
+        font-size: 3em;
+      }
+    }
+
+    &__guides-icons {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &__guides-img {
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    &__form {
+      form {
+        label {
+          font-size: 1.7em;
+          margin-bottom: 1.3rem;
+        }
+
+        input {
+          margin-bottom: 1.7rem;
+        }
+      }
+    }
+  }
+
+  .book-now {
+    h3 {
+      font-size: 1.6em;
+    }
+
+    &__form {
+      width: 50%;
+    }
+  }
+
+  .form-sent {
+    &__card {
+      padding: 2.5rem;
+
+      p {
+        font-size: 1.4em;
+      }
+
+      .btn {
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  .reviews {
+    &__card {
+      height: 57rem;
+    }
+
+    &__nav {
+      .prev {
+        left: 9%;
+      }
+
+      .next {
+        right: 9%;
+      }
+    }
+
+    &__box {
+      font-size: 1.3em;
+
+      p {
+        line-height: 2.2rem;
+        letter-spacing: 4px;
+      }
+    }
+  }
+
+  .footer {
+    &__top {
+      padding: 3.5rem;
+    }
+
+    &__adresses {
+      h3 {
+        margin-bottom: 2rem;
+      }
+
+      h4 {
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+    &__adress {
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.9rem;
+      }
+    }
+
+    &__adress:first-of-type {
+      margin-bottom: 2rem;
+    }
+
+    &__nav {
+      li {
+        margin-bottom: 2rem;
+        transition: all 0.3s;
+      }
+
+      &--box {
+        margin-top: 0.9rem;
+
+        a {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      &--icons {
+        margin-top: 1.5rem;
+        transition: all 0.3s;
+        img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  .wrapper {
+    max-width: 1800px;
+  }
+  .nav {
+    padding: 1rem 29rem;
+    &__item {
+      font-size: 2.8rem;
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+
+    &__hero-text {
+      width: 50%;
+
+      h1 {
+        font-size: 10rem;
+      }
+
+      p {
+        font-size: 3.7rem;
+      }
+
+      .cta-arrow-large {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    &__hero-img {
+      width: 50%;
+    }
+  }
+
+  .about {
+    padding: 5rem;
+
+    &__heading {
+      font-size: 3.6em;
+      margin-bottom: 2rem;
+    }
+
+    &__content {
+      p {
+        font-size: 2.2em;
+      }
+
+      &--text {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &__card {
+      margin-top: 3rem;
+
+      &--icon {
+        margin-bottom: 1.3em;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &--text {
+        h3 {
+          font-size: 2.3em;
+          margin-bottom: 0.9rem;
+        }
+
+        p {
+          font-size: 1.8em;
+          width: 80%;
+        }
+      }
+    }
+
+    &__img {
+      height: 14em;
+    }
+  }
+
+  .offer {
+    &__section {
+      h1,
+      h2 {
+        font-size: 4em;
+      }
+    }
+
+    &__card {
+      h3 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.6em;
+      }
+    }
+
+    &__card:first-child {
+      margin-right: 2rem;
+    }
+
+    &__card:last-child {
+      margin-left: 2rem;
+    }
+
+    .btn {
+      font-size: 2em;
+      margin-top: 4rem;
+    }
+  }
+
+  .prices {
+    h1 {
+      font-size: 5em;
+    }
+
+    .extra-price {
+      font-size: 2em;
+    }
+
+    &__cards {
+      flex-direction: row;
+      gap: 2.5rem;
+    }
+
+    &__card {
+      margin-top: 6rem;
+
+      h3 {
+        font-size: 2em;
+      }
+
+      &--content {
+        font-size: 1.7em;
+      }
+      &--cta {
+        transform: scaleY(1.3);
+      }
+    }
+  }
+
+  .contact {
+    h1 {
+      font-size: 5rem;
+    }
+
+    &__contact-data {
+      width: 90%;
+
+      &--cards {
+        gap: 6rem;
+      }
+
+      &--card {
+        .office-img {
+          height: 55rem;
+        }
+
+        h3 {
+          font-size: 3em;
+        }
+      }
+
+      &--icon {
+        padding: 2em;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+
+        p {
+          font-size: 2.3em;
+          margin-left: 2rem;
+        }
+      }
+    }
+    .btn {
+      font-size: 2.3em;
+    }
+
+    h2 {
+      font-size: 5em;
+    }
+
+    &__guides-cards {
+      flex-direction: row;
+      gap: 4rem;
+    }
+
+    &__guides-card {
+      margin-bottom: 4rem;
+
+      h3 {
+        font-size: 4em;
+      }
+    }
+
+    &__guides-img {
+      img {
+        width: 350px;
+        height: 350px;
+      }
+    }
+
+    &__guides-icons {
+      margin-top: 1rem;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__form {
+      form {
+        label {
+          font-size: 2em;
+          margin-bottom: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .form-sent {
+    &__card {
+      p {
+        font-size: 1.6em;
+      }
+
+      .btn {
+        font-size: 1.6em;
+      }
+    }
+  }
+
+  // .footer {
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 100%;
+  // }
+
+  .reviews {
+    &__card {
+      height: 59rem;
+    }
+
+    &__nav {
+      .prev {
+        left: 15%;
+      }
+
+      .next {
+        right: 15%;
+      }
+    }
+
+    &__box {
+      font-size: 1.5em;
+      padding: 3rem;
+
+      p {
+        line-height: 2.5rem;
+        letter-spacing: 6px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__icon {
+      top: 1.5rem;
+      left: 2.2rem;
+    }
+  }
+
+  .about-iceland {
+    .swiper {
+      width: 80rem;
+      margin-bottom: 6rem;
+    }
+
+    &__card {
+      margin-top: 6rem;
+
+      p {
+        font-size: 2em;
+      }
+    }
+  }
+}

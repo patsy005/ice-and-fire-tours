@@ -1,0 +1,109 @@
+.reviews {
+  color: white;
+  position: relative;
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    width: 73%;
+  }
+
+  &__nav {
+    .prev,
+    .next {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $lighter-dark;
+      font-size: 2.5em;
+      color: $primary-lighter;
+      //   font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 60%;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .prev:hover,
+    .next:hover {
+      text-shadow: 0 0 7px $primary-lighter;
+      border: 1px solid $primary-lighter;
+    }
+
+    .prev {
+      left: 8%;
+    }
+
+    .next {
+      right: 8%;
+    }
+  }
+
+  //   .main {
+  //     display: block;
+  //   }
+
+  &__card {
+    position: relative;
+    width: 70%;
+    // height: 100%;
+    height: 41rem;
+    margin: 0 auto;
+    // display: none;
+    border-radius: 6px;
+    background-color: $primary-lighter;
+  }
+
+  &__box {
+    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    transform: translate(-50%);
+    border-radius: 6px;
+    background-color: $dark;
+    width: 70%;
+    margin: 0 auto;
+    opacity: 0.8;
+    padding: 2rem;
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 2px;
+    }
+
+    p:last-of-type {
+      text-align: right;
+      font-weight: bolder;
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    width: 30px;
+    height: 30px;
+    opacity: 0.4;
+  }
+
+  &__img {
+    height: 45%;
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+
+    img {
+      border-radius: 6px 6px 0 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

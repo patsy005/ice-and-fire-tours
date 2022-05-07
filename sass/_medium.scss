@@ -1,0 +1,389 @@
+@media (min-width: 768px) {
+  body {
+    background-color: $dark;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: none;
+    background-color: $dark;
+
+    h1 {
+      font-size: 4.8rem;
+    }
+
+    p {
+      font-size: 1.7rem;
+    }
+
+    &__hero-img {
+      @include heroLg("../img/new/hero-img-lg.jpg");
+      grid-column: 1/2;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__hero-text {
+      grid-column: 2/3;
+      display: grid;
+      justify-content: center;
+    }
+
+    .cta-arrow-down {
+      left: 75%;
+    }
+  }
+
+  .about {
+    padding: 3em;
+
+    &__sections {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+
+    &__left {
+      grid-column: 1/2;
+      order: 1;
+      padding: 0;
+    }
+
+    &__right {
+      grid-column: 2/3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 2em;
+    }
+
+    &__img {
+      width: 100%;
+      height: 7em;
+      border-radius: 6px;
+
+      &--one {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+
+      &--two {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+
+      &--three {
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+    }
+  }
+
+  .offer {
+    &__section {
+      width: 100%;
+    }
+
+    &__cards {
+      display: flex;
+    }
+
+    &__card:first-child {
+      margin-right: 0.7rem;
+    }
+
+    &__card:last-child {
+      margin-left: 0.7rem;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .gallery {
+    height: 100%;
+    h1 {
+      margin-bottom: 2rem;
+      margin-top: 5rem;
+      font-size: 2em;
+    }
+    .wrapper {
+      margin-bottom: 3rem;
+    }
+
+    &__section {
+      // height: 100vh;
+      margin-bottom: 3rem;
+    }
+
+    &__box {
+      gap: 2rem;
+      margin-bottom: 2rem;
+
+      img {
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .prices {
+    h1 {
+      margin-top: 7rem;
+      font-size: 2em;
+    }
+
+    .extra-price {
+      margin-bottom: 3rem;
+      font-size: 1.3rem;
+    }
+
+    &__card {
+      width: 50%;
+    }
+  }
+
+  .contact {
+    padding: 3em;
+    color: white;
+
+    h1 {
+      margin-top: 6rem;
+      font-size: 2em;
+      margin-bottom: 2rem;
+    }
+
+    &__contact-data {
+      &--cards {
+        flex-direction: row;
+        gap: 1.5rem;
+      }
+
+      &--card {
+        .office-img {
+          height: 17rem;
+        }
+
+        h3 {
+          font-size: 1.5em;
+        }
+      }
+
+      &--btn {
+        a {
+          font-size: 1.4em;
+        }
+      }
+
+      &--icon {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+
+        p {
+          font-size: 1.4em;
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    &__guides-cards {
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    &__guides-card {
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: 1.7em;
+      }
+    }
+
+    &__guides-img {
+      img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    &__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      form {
+        width: 50%;
+
+        label {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+
+  .book-now {
+    h3 {
+      font-size: 1.5em;
+      margin-bottom: 1.3rem;
+      margin-top: 1.3rem;
+    }
+
+    &__form {
+      width: 80%;
+      margin: 0 auto;
+
+      &--date {
+        margin-bottom: 1.3rem;
+        gap: 2rem;
+      }
+
+      &--personal-data {
+        gap: 2rem;
+
+        input {
+          width: 100%;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    &__btns {
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .footer {
+    &__adresses {
+      // display: flex;
+      // justify-content: space-between;
+      // gap: 3rem;
+
+      &--box {
+        display: flex;
+        gap: 3rem;
+      }
+      h3 {
+        font-size: 1.3em;
+        margin-bottom: 1.9rem;
+      }
+
+      h4 {
+        font-size: 1.1em;
+        margin-bottom: 0.6rem;
+      }
+
+      p {
+        margin-bottom: 0.4rem;
+      }
+    }
+
+    &__adress:first-of-type {
+      margin-bottom: 1.3rem;
+    }
+
+    &__nav {
+      &--box {
+        margin-top: 1.7rem;
+
+        a,
+        p {
+          margin-bottom: 0.8rem;
+        }
+      }
+
+      &--icons {
+        margin-top: 1.7rem;
+
+        a:hover {
+          img {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      &--box {
+        width: 50%;
+
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .reviews {
+    &__cards {
+      margin-top: 4rem;
+      width: 79%;
+    }
+
+    &__nav {
+      .prev {
+        left: 5%;
+      }
+
+      .next {
+        right: 5%;
+      }
+    }
+
+    &__card {
+      height: 43rem;
+    }
+
+    &__box {
+      padding: 2.3rem;
+      text-align: center;
+
+      p {
+        margin-bottom: 1.3rem;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  .about-iceland {
+
+    .swiper {
+      width: 40rem;
+      height: 15rem;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
+
+    &__card {
+      margin-top: 3rem;
+      align-items: center;
+
+      img {
+        opacity: 0.04;
+        height: 400px;
+      }
+
+      p {
+        letter-spacing: 3px;
+        line-height: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+@media (min-width: 915px) {
+  .contact {
+    &__contact-data {
+      &--card {
+        width: 40%;
+      }
+    }
+  }
+}

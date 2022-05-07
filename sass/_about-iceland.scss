@@ -1,0 +1,73 @@
+.about-iceland {
+  color: white;
+  height: 70vh;
+
+  //   .swiper-wrapper {
+  //     display: flex;
+  //     flex-direction: column;
+  //   }
+
+  .swiper {
+    width: 23rem;
+    width: 80%;
+    height: 15rem;
+    margin: 0 auto;
+  }
+  
+  &__card {
+    background-color: $lighter-dark;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      opacity: 0.1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 300px;
+    }
+
+    p {
+      color: $primary;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      font-weight: bolder;
+    }
+  }
+
+  .primary {
+    background-color: $primary;
+
+    p {
+      color: $lighter-dark;
+    }
+  }
+
+  .primary-lighter {
+    background-color: $primary-lighter;
+
+    p {
+      color: $dark;
+    }
+  }
+
+  .primary-dark {
+    background-color: $primary-dark;
+
+    p {
+      color: white;
+    }
+  }
+}

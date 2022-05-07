@@ -1,0 +1,44 @@
+
+
+.faq {
+    color: white;
+
+    h3 {
+        margin-bottom: 3rem;
+        font-weight: lighter;
+        font-size: 1.3em;
+    }
+
+    &__box {
+        border-bottom: 1px solid $primary;
+        margin-bottom: 2rem;
+
+        &--top {
+            display: flex;
+            justify-content: space-between;
+
+            h4 {
+                font-size: 1.3em;
+                color: $primary-lighter;
+                margin-bottom: 1.5rem;
+            }
+
+            img {
+                margin-bottom: 1rem;
+                cursor: pointer;
+            }
+        }
+
+        &--bottom {
+            display: none;
+            p {
+                margin-bottom: 0.5rem;
+                letter-spacing: .2em;
+            }
+
+            p:last-of-type {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

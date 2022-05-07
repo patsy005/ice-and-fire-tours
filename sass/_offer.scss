@@ -1,0 +1,169 @@
+.offer {
+  // display: none;
+  color: white;
+  // height: 100%;
+
+
+  &__card-back-img {
+    @include heroImg("../img/weather/mountains-862870_640.jpg");
+    width: 100%;
+    height: 100%;
+    background-attachment: unset;
+    object-fit: cover;
+    box-shadow: 0 0 3px 1px $primary;
+  }
+
+  &__card {
+    position: relative;
+    margin-bottom: 1.5rem;
+    background-color: $lighter-dark;
+    border-radius: 6px;
+    padding: 2rem;
+    width: 100%;
+    perspective: 800px;
+    overflow: hidden;
+
+    &--front {
+      display: none;
+      display: block;
+    }
+
+    &--back {
+      display: none;
+      // display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $primary-lighter;
+
+      .top {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+
+        h4 {
+          font-size: 1.2em;
+        }
+
+        p {
+          font-size: 1.1em;
+          text-align: center;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 3rem;
+
+        .circle {
+          margin: 0 auto;
+          width: 7.5rem;
+          height: 7.5rem;
+          border-radius: 50%;
+          // border: 1px solid $primary;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 0.5rem;
+          box-shadow: 0 0 3px 1px $primary;
+
+          p {
+            text-align: center;
+            padding: 0.3rem;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+      margin-top: 1.3rem;
+      font-size: 1.5em;
+    }
+
+    p {
+      font-weight: lighter;
+      line-height: 1.6rem;
+      margin-bottom: 1rem;
+      font-size: 1.2em;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+    // display: none;
+
+    img {
+      padding: 1rem;
+      transition: 0.3s;
+    }
+  }
+
+  
+}
+
+
+.book-now {
+  display: none;
+  position: relative;
+  padding: 3em;
+  justify-content: center;
+  align-items: center;
+  background-color: #191919;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+
+  h3 {
+    font-size: 1.3em;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  &__form {
+    &--date {
+      display: flex;
+      margin-bottom: 1rem;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    .personal-data-box {
+      width: 100%;
+    }
+
+    .date-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      input {
+        width: 80%;
+      }
+    }
+
+    &--personal-data {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+
+      input {
+        width: 100%;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 1rem;
+  }
+}

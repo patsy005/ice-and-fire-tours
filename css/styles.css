@@ -428,17 +428,17 @@
 }
 
 .about__img--one {
-  background-image: url("/img/new/header1.jpg");
+  background-image: url("../img/new/header1.jpg");
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
 
 .about__img--two {
-  background-image: url("/img//new/header2.jpg");
+  background-image: url("../img//new/header2.jpg");
 }
 
 .about__img--three {
-  background-image: url("/img//new/header3.jpg");
+  background-image: url("../img//new/header3.jpg");
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }

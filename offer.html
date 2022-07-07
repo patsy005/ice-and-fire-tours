@@ -16,7 +16,7 @@
     <script src="js/nav.js" defer></script>
     <script src="js/book-form.js" defer></script>
     <script src="js/offer.js" defer></script>
-    <script src="js/main.js"defer></script>
+    <script src="js/main.js" defer></script>
   </head>
 
   <body>
@@ -27,11 +27,11 @@
     </div>
 
     <nav class="nav nav-mobile fixed-top">
-      <button class="exit-btn">
-        <div class="exit"></div>
-      </button>
-
       <div class="wrapper">
+        <button class="exit-btn">
+          <div class="exit"></div>
+        </button>
+
         <ul class="nav__list">
           <div class="logo">
             <li class="nav__item nav__item-logo">
@@ -277,7 +277,9 @@
             <form action="" class="book-now__form">
               <label for="offer-type">Offer Type:</label>
               <select name="offer-type" id="offer-type" class="offer-input">
-                <option value="not-selected" selected disabled>---select a type of your trip---</option>
+                <option value="not-selected" selected disabled>
+                  ---select a type of your trip---
+                </option>
                 <option value="relaxation">Relaxation</option>
                 <option value="relaxAndExplore">Relax & Explore</option>
                 <option value="deepExploration">Deep Exploration</option>
@@ -289,7 +291,9 @@
 
               <label for="departure">City of Departure:</label>
               <select name="departure" id="departure" class="offer-input">
-                <option value="not-selected" selected disabled>---select a city---</option>
+                <option value="not-selected" selected disabled>
+                  ---select a city---
+                </option>
                 <option value="london">London</option>
                 <option value="birmingham">Birmingham</option>
                 <option value="manchester">Manchester</option>
@@ -300,12 +304,23 @@
               <div class="book-now__form--date">
                 <div class="date-box">
                   <label for="from-date">From:</label>
-                  <input type="date" id="from-date" name="from-date" class="offer-input" />
+                  <input
+                    type="date"
+                    id="from-date"
+                    name="from-date"
+                    class="offer-input"
+                  />
                   <p class="error-msg"></p>
                 </div>
                 <div class="date-box">
                   <label for="to-date">To:</label>
-                  <input type="date" id="to-date" name="to-date" disabled class="offer-input" />
+                  <input
+                    type="date"
+                    id="to-date"
+                    name="to-date"
+                    disabled
+                    class="offer-input"
+                  />
                   <p class="error-msg"></p>
                 </div>
               </div>
@@ -314,12 +329,22 @@
               <div class="book-now__form--personal-data">
                 <div class="personal-data-box">
                   <label for="name">Name:</label>
-                  <input type="text" name="name" id="name" class="offer-input" />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="offer-input"
+                  />
                   <p class="error-msg"></p>
                 </div>
                 <div class="personal-data-box">
                   <label for="surname">Surname:</label>
-                  <input type="text" name="surname" id="surname" class="offer-input" />
+                  <input
+                    type="text"
+                    name="surname"
+                    id="surname"
+                    class="offer-input"
+                  />
                   <p class="error-msg"></p>
                 </div>
               </div>
@@ -327,12 +352,22 @@
               <div class="book-now__form--personal-data">
                 <div class="personal-data-box">
                   <label for="phone">Phone Number:</label>
-                  <input type="number" name="phone" id="phone" class="offer-input" />
+                  <input
+                    type="number"
+                    name="phone"
+                    id="phone"
+                    class="offer-input"
+                  />
                   <p class="error-msg"></p>
                 </div>
                 <div class="personal-data-box">
                   <label for="email">Email Address:</label>
-                  <input type="email" name="email" id="email" class="offer-input"/>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="offer-input"
+                  />
                   <p class="error-msg"></p>
                 </div>
               </div>
@@ -358,9 +393,7 @@
       </div>
     </section>
 
-    
     <footer class="footer">
-      
       <div class="footer__top">
         <div class="wrapper">
           <div class="footer__top--section">
@@ -392,7 +425,11 @@
               <ul>
                 <li><a href="faq.html" class="footer__link">FAQ</a></li>
                 <li><a href="reviews.html" class="footer__link">Rewievs</a></li>
-                <li><a href="about-iceland.html" class="footer__link">About Iceland</a></li>
+                <li>
+                  <a href="about-iceland.html" class="footer__link"
+                    >About Iceland</a
+                  >
+                </li>
                 <li>
                   <a href="#" class="footer__link">Customer Service</a>
                   <div class="footer__nav--box">
@@ -420,23 +457,23 @@
             </div>
           </div>
         </div>
-        
       </div>
 
       <div class="footer__bottom">
         <div class="wrapper">
           <div class="footer__bottom--section">
-          <div class="footer__bottom--box">
-            <p>Terms of Service</p>
-            <div class="footer__bottom--circle"></div>
-            <p>Privacy Policy</p>
+            <div class="footer__bottom--box">
+              <p>Terms of Service</p>
+              <div class="footer__bottom--circle"></div>
+              <p>Privacy Policy</p>
+            </div>
+            <p class="copyright">
+              &copy; Copyright <span class="current-year"></span>, Ice&Fire
+              Tours
+            </p>
           </div>
-          <p class="copyright">&copy; Copyright <span class="current-year"></span>, Ice&Fire Tours</p>
         </div>
-        </div>
-        
       </div>
-
-  </footer>
+    </footer>
   </body>
 </html>

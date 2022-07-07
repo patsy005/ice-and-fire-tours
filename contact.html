@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="js/helpers.js" defer></script>
     <script src="js/nav.js" defer></script>
+    <script src="js/contact-form.js" defer></script>
     <script src="js/main.js" defer></script>
   </head>
 
@@ -227,12 +228,25 @@
           <h2>Contact Form</h2>
           <div class="contact__form" id="contact-form">
             <form action="">
+              <section class="sent">
+                <div class="wrapper">
+                  <div class="sent__card">
+                    <p>Your request was successfully sent !</p>
+                    <p>We will response as soon as possible</p>
+          
+                    <button class="btn sent-ok">OK</button>
+                  </div>
+                </div>
+              </section>
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required />
+              <p class="error-msg"></p>
               <label for="email">Email address:</label>
-              <input type="email" id="name" name="email" required />
+              <input type="email" id="email" name="email" required />
+              <p class="error-msg"></p>
               <label for="number">Phone number:</label>
               <input type="number" id="number" name="number" required />
+              <p class="error-msg"></p>
               <label for="msg">Message:</label>
               <textarea
                 name="msg"
@@ -241,9 +255,10 @@
                 rows="10"
                 required
               ></textarea>
+              <p class="error-msg"></p>
 
               <div class="btns">
-                <button class="btn primary-btn">Send</button>
+                <button class="btn primary-btn btn-send">Send</button>
                 <button class="btn reset" type="reset">Clear</button>
               </div>
             </form>

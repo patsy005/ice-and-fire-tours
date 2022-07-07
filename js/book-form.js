@@ -82,49 +82,6 @@ function tripDuration() {
   return formData;
 }
 
-function userDataValidation() {
-  userName = document.querySelector("#name");
-  userSurname = document.querySelector("#surname");
-  userPhone = document.querySelector("#phone");
-
-  if (userName.value === "" || userName.value.length < 2) {
-    addError(userName, "enter a", "name");
-  } else {
-    removeError(userName);
-  }
-
-  if (userSurname.value === "" || userSurname.value.length < 2) {
-    addError(userSurname, "enter a", "surname");
-  } else {
-    removeError(userSurname);
-  }
-
-  if (userPhone.value === "" || userPhone.value.length < 4) {
-    addError(userPhone, "enter a valid", "phone number");
-  } else {
-    removeError(userPhone);
-  }
-
-  emailIsValid();
-  selectsIsValid();
-  dateIsValid();
-}
-
-function emailIsValid() {
-  userEmail = document.querySelector("#email");
-
-  const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  const mailIsValid = userEmail.value.match(re);
-
-  if (userEmail.value === "" || !mailIsValid) {
-    addError(userEmail, "enter a valid", "email");
-  } else {
-    removeError(userEmail);
-  }
-}
-
 function selectsIsValid() {
   if (offerSelect.value === "not-selected") {
     addError(offerSelect, "choose a", "offer type");
@@ -150,7 +107,10 @@ function dateIsValid() {
 }
 
 function formValidation() {
-  userDataValidation();
+  userDataValidation("name", "phone", "email", "surname");
+  selectsIsValid();
+  dateIsValid();
+  // userDataValidation();
 }
 
 function clearForm() {

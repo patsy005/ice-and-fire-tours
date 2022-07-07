@@ -1,4 +1,6 @@
-function openMobileNav() {
+
+
+ function openMobileNav() {
   elementDisplay(navMobile, "flex");
   elementDisplay(burgerBtn, "none");
 
@@ -11,7 +13,7 @@ function openMobileNav() {
   elementBackground(navMobile, "black");
 }
 
-function closeMobileNav() {
+ function closeMobileNav() {
   windowSize();
 
   if (width < 992) {
@@ -33,7 +35,7 @@ function closeMobileNav() {
   }
 }
 
-function showDesktopNav() {
+ function showDesktopNav() {
   windowSize();
 
   if (width >= 992) {
@@ -47,7 +49,7 @@ function showDesktopNav() {
   }
 }
 
-function navShadow() {
+ function navShadow() {
   if (window.scrollY >= 60) {
     elementBackground(navMobile, "black");
   } else if (width < 992) {

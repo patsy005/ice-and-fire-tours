@@ -169,7 +169,6 @@
       input,
       textarea {
         background: transparent;
-        border: 1px solid $primary;
         border-radius: 3px;
         padding: 0.5rem;
         margin-bottom: 1rem;
@@ -204,4 +203,33 @@
       }
     }
   }
+}
+
+.sent {
+  display: block;
+  display: none;
+  width: 100%;
+  height: 100%;
+  color: $light;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2rem;
+  border: 2px solid $primary;
+
+  p{
+    font-size: 1.2em;
+  }
+
+  p:first-of-type {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    margin-top: 3rem;
+    font-size: 1.2em;
+    width: 50%;
+    margin: 3rem auto 0 auto;
+  }
+
+
 }

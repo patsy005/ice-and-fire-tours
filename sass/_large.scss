@@ -551,9 +551,6 @@
 }
 
 @media (min-width: 1440px) {
-  .nav {
-    padding: 1rem 9rem;
-  }
   .contact {
     &__contact-data {
       width: 70%;
@@ -742,7 +739,6 @@
     max-width: 1800px;
   }
   .nav {
-    padding: 1rem 29rem;
     &__item {
       font-size: 2.8rem;
     }

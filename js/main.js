@@ -12,10 +12,11 @@ let userName;
 let userSurname;
 let userPhone;
 let userEmail;
+let userMsg;
 
 let inputs;
 
-let width;
+ let width;
 let height;
 
 burgerBtn.addEventListener("click", openMobileNav);
@@ -23,4 +24,4 @@ exitNavBtn.addEventListener("click", closeMobileNav);
 window.addEventListener("scroll", navShadow);
 window.addEventListener("resize", showDesktopNav);
 
-currentYear();
+// currentYear();

@@ -1163,7 +1163,6 @@
 .contact__form form input,
 .contact__form form textarea {
   background: transparent;
-  border: 1px solid #EACF8B;
   border-radius: 3px;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -1198,6 +1197,33 @@
 
 .contact__form form .reset {
   color: black;
+}
+
+.sent {
+  display: block;
+  display: none;
+  width: 100%;
+  height: 100%;
+  color: #e4e4e4;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2rem;
+  border: 2px solid #EACF8B;
+}
+
+.sent p {
+  font-size: 1.2em;
+}
+
+.sent p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.sent .btn {
+  margin-top: 3rem;
+  font-size: 1.2em;
+  width: 50%;
+  margin: 3rem auto 0 auto;
 }
 
 .faq {
@@ -2895,9 +2921,6 @@ body {
 }
 
 @media (min-width: 1440px) {
-  .nav {
-    padding: 1rem 9rem;
-  }
   .contact__contact-data {
     width: 70%;
   }
@@ -3027,9 +3050,6 @@ body {
 @media (min-width: 2560px) {
   .wrapper {
     max-width: 1800px;
-  }
-  .nav {
-    padding: 1rem 29rem;
   }
   .nav__item {
     font-size: 2.8rem;

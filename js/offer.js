@@ -1,6 +1,5 @@
 const bookNowBtns = document.querySelectorAll(".offer-btn");
 const bookNowBtsArr = Array.from(bookNowBtns);
-console.log(bookNowBtsArr);
 
 const currentSection = document.querySelector(".offer");
 

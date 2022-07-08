@@ -12,9 +12,9 @@ function showFAQInfo(e) {
   const iconSrc = icon.src;
 
   if (iconSrc.includes("plus.svg")) {
-    icon.setAttribute("src", "../img/icons/minus.svg");
+    icon.setAttribute("src", "img/icons/minus.svg");
   } else {
-    icon.setAttribute("src", "../img/icons/plus.svg");
+    icon.setAttribute("src", "img/icons/plus.svg");
   }
 }
 
